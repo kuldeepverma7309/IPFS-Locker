@@ -25,7 +25,7 @@ const App = () => {
         await window.ethereum.request({ method: 'eth_requestAccounts' })
         const signer = await _provider.getSigner()
         const _account = await signer.getAddress()
-        let contractAddress = '0x73511669fd4dE447feD18BB79bAFeAC93aB7F31f'
+        let contractAddress = '0x6Dfe034353EcDDB85eFBBaBC29F867F4655aC36B'
         const _contract = new ethers.Contract(contractAddress, Upload.abi, signer)
         setContract(_contract)
         setAccount(_account)
